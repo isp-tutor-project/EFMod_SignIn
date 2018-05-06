@@ -1,4 +1,7 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Scenes/TC_TScene__SoundCheck" itemID="5ae37634-0000040d" lastModified="1524856372">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Scenes/TC_TScene__SoundCheck" itemID="5ae37634-0000040d" lastModified="1525562423">
+  <persistentData>
+    <PD n="CreateJSToolkit_timelinedata" v="version&#xA;0.1&#xA;loop&#xA;true"/>
+  </persistentData>
   <timeline>
     <DOMTimeline name="TC_TScene__SoundCheck">
       <layers>
@@ -6,42 +9,42 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMBitmapInstance selected="true" libraryItemName="Scene Assets/TC_TScene__SoundCheck/icon0.png">
+                <DOMBitmapInstance libraryItemName="Scene Assets/TC_TScene__SoundCheck/icon0.png">
                   <matrix>
                     <Matrix tx="632" ty="939"/>
                   </matrix>
                 </DOMBitmapInstance>
-                <DOMBitmapInstance selected="true" libraryItemName="Scene Assets/TC_TScene__SoundCheck/icon3.png">
+                <DOMBitmapInstance libraryItemName="Scene Assets/TC_TScene__SoundCheck/icon3.png">
                   <matrix>
                     <Matrix tx="996" ty="939"/>
                   </matrix>
                 </DOMBitmapInstance>
-                <DOMBitmapInstance selected="true" libraryItemName="Scene Assets/TC_TScene__SoundCheck/icon4.png">
+                <DOMBitmapInstance libraryItemName="Scene Assets/TC_TScene__SoundCheck/icon4.png">
                   <matrix>
                     <Matrix tx="874" ty="939"/>
                   </matrix>
                 </DOMBitmapInstance>
-                <DOMBitmapInstance selected="true" libraryItemName="Scene Assets/TC_TScene__SoundCheck/icon5.png">
+                <DOMBitmapInstance libraryItemName="Scene Assets/TC_TScene__SoundCheck/icon5.png">
                   <matrix>
                     <Matrix tx="753" ty="939"/>
                   </matrix>
                 </DOMBitmapInstance>
-                <DOMBitmapInstance selected="true" libraryItemName="Scene Assets/TC_TScene__SoundCheck/icon6.png">
+                <DOMBitmapInstance libraryItemName="Scene Assets/TC_TScene__SoundCheck/icon6.png">
                   <matrix>
                     <Matrix tx="1238" ty="939"/>
                   </matrix>
                 </DOMBitmapInstance>
-                <DOMBitmapInstance selected="true" libraryItemName="Scene Assets/TC_TScene__SoundCheck/iconStar.png">
+                <DOMBitmapInstance libraryItemName="Scene Assets/TC_TScene__SoundCheck/iconStar.png">
                   <matrix>
                     <Matrix tx="1117" ty="939"/>
                   </matrix>
                 </DOMBitmapInstance>
-                <DOMBitmapInstance selected="true" libraryItemName="Scene Assets/TC_TScene__SoundCheck/SpkrIcon.png">
+                <DOMBitmapInstance libraryItemName="Scene Assets/TC_TScene__SoundCheck/SpkrIcon.png">
                   <matrix>
                     <Matrix tx="760" ty="350"/>
                   </matrix>
                 </DOMBitmapInstance>
-                <DOMStaticText selected="true" fontRenderingMode="standard" width="560.8" height="83.8" autoExpand="true" isSelectable="false">
+                <DOMStaticText fontRenderingMode="standard" width="560.8" height="83.8" autoExpand="true" isSelectable="false">
                   <matrix>
                     <Matrix tx="679.6" ty="225.25"/>
                   </matrix>
@@ -54,7 +57,7 @@
                     </DOMTextRun>
                   </textRuns>
                 </DOMStaticText>
-                <DOMStaticText selected="true" fontRenderingMode="standard" left="-48.05" width="240.1" height="40.9" autoExpand="true" isSelectable="false">
+                <DOMStaticText fontRenderingMode="standard" left="-48.05" width="240.1" height="40.9" autoExpand="true" isSelectable="false">
                   <matrix>
                     <Matrix tx="888" ty="683.1"/>
                   </matrix>
@@ -67,6 +70,14 @@
                     </DOMTextRun>
                   </textRuns>
                 </DOMStaticText>
+                <DOMSymbolInstance libraryItemName="TC_TButton__Button1" name="SButton1" selected="true" symbolType="button">
+                  <matrix>
+                    <Matrix tx="911.8" ty="759.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
               </elements>
             </DOMFrame>
           </frames>
