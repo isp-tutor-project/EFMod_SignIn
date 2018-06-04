@@ -15,6 +15,8 @@
 //*********************************************************************************
 'use strict';
 const fs = require('fs');
+const path = require('path');
+const json5 = require('json5');
 const source = "./DOMDocument.xml";
 const chars = "0123456789ABCDEF";
 function genGUID() {
@@ -34,6 +36,9 @@ function genGUID() {
  *
  */
 function generateModuleGUID(source) {
+    // *****************************************************
+    // Update the AnimateCC project XMLDocument
+    // 
     var DOMParser = require('xmldom').DOMParser;
     var XMLSerializer = require('xmldom').XMLSerializer;
     let parser = new DOMParser();
@@ -68,6 +73,39 @@ function generateModuleGUID(source) {
     console.info(update);
     try {
         fs.writeFileSync(source, update, 'utf8');
+    }
+    catch (err) {
+        if (err) {
+            console.error('ERROR:', err);
+            return;
+        }
+    }
+    // *****************************************************
+    // Update/Add the associated anModule entry in EFDdata/bootloader.json5
+    let fProcessed = false;
+    let prntName = path.basename(path.resolve(".."));
+    let ModName = path.basename(path.resolve("."));
+    console.info(ModName);
+    let loaderPath = path.resolve("../EFData/bootLoader.json5");
+    console.info(loaderPath);
+    let loaderJSON = fs.readFileSync(loaderPath, "utf8");
+    var loaderDoc = json5.parse(loaderJSON);
+    for (let anModule in loaderDoc.anModules) {
+        let module = loaderDoc.anModules[anModule];
+        if (module.name === ModName) {
+            module.compID = _fileGUID;
+            fProcessed = true;
+            break;
+        }
+    }
+    if (!fProcessed) {
+        loaderDoc.anModules[ModName.toUpperCase()] = { name: ModName, parentFldr: prntName, type: "application/javascript", compID: _fileGUID, URL: ModName + '.js' };
+    }
+    // Generate the new DOMDocument from the XML
+    let loaderUpdate = json5.stringify(loaderDoc, null, '\t');
+    console.info(loaderUpdate);
+    try {
+        fs.writeFileSync(loaderPath, loaderUpdate, 'utf8');
     }
     catch (err) {
         if (err) {
